@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edman Haking | صانع بوتات تليجرام</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<header>
+  <div class="logo"><span>👑</span> EDMAN HAKING</div>
+  <div class="header-badge">⚡ صانع بوتات تليجرام</div>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>اصنع بوت تليجرام احترافي في ثوانٍ</h1>
+    <p>15 نوع مختلف — أدخل بياناتك واختر النوع، والبوت يشتغل فوراً!</p>
+  </div>
+
+  <!-- إعدادات البوت -->
+  <div class="setup-bar">
+    <div class="setup-title"><span>🔐</span> إعدادات البوت</div>
+    <div class="setup-grid">
+      <div class="field">
+        <label>🤖 توكن البوت</label>
+        <input type="text" id="botToken" placeholder="1234567890:ABCdef...">
+        <span class="hint">من @BotFather</span>
+      </div>
+      <div class="field">
+        <label>👤 الآي دي (Admin ID)</label>
+        <input type="text" id="adminId" placeholder="123456789">
+        <span class="hint">من @userinfobot</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- اختيار نوع البوت -->
+  <div class="bot-selector">
+    <button class="select-btn" id="selectBotBtn">
+      <span>🎯 اختر نوع البوت</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="dropdown" id="botDropdown"></div>
+  </div>
+
+  <div class="create-section">
+    <button class="create-btn" id="createBtn" disabled>⚡ إنشاء البوت</button>
+  </div>
+
+  <!-- لوحة التحكم -->
+  <div class="dashboard" id="dashboard">
+    <div class="dashboard-header">
+      <div class="dashboard-title">
+        <span id="dashIcon">🤖</span>
+        <span>لوحة تحكم — <span id="dashBotName"></span></span>
+      </div>
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span>يعمل الآن</span>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="add">➕ إضافة</button>
+      <button class="tab" data-tab="items">📦 العناصر</button>
+      <button class="tab" data-tab="users">👥 المستخدمين</button>
+      <button class="tab" data-tab="stats">📊 الإحصائيات</button>
+    </div>
+
+    <div class="tab-content active" id="tab-add">
+      <div class="form-group">
+        <label>العنوان</label>
+        <input type="text" id="itemTitle" placeholder="اسم المنتج / الفيديو">
+      </div>
+      <div class="form-group">
+        <label>الوصف</label>
+        <textarea id="itemDesc" placeholder="وصف تفصيلي..."></textarea>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>السعر (اختياري)</label>
+          <input type="text" id="itemPrice" placeholder="100 جنيه">
+        </div>
+        <div class="form-group">
+          <label>الرابط (اختياري)</label>
+          <input type="text" id="itemLink" placeholder="https://...">
+        </div>
+      </div>
+      <button class="submit-btn" id="addItemBtn">💾 حفظ</button>
+    </div>
+
+    <div class="tab-content" id="tab-items">
+      <div class="items-list" id="itemsList">
+        <p style="text-align:center; color:#888;">لا توجد عناصر بعد</p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-users">
+      <div class="items-list" id="usersList">
+        <p style="text-align:center; color:#888;">لا يوجد مستخدمين بعد</p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-stats">
+      <div class="stats-grid">
+        <div class="stat-card"><span id="statItems">0</span><label>عنصر</label></div>
+        <div class="stat-card"><span id="statUsers">0</span><label>مستخدم</label></div>
+        <div class="stat-card"><span id="statOrders">0</span><label>طلب</label></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-poetry">
+    <p>🔥 إدمان المدمر هيهين أي حد متنمر 🔥</p>
+    <p>💀 متعملش راجل ادامي عشان أنا المسؤول عن رجولتك 💀</p>
+  </div>
+  <div class="social-links">
+    <a href="https://www.youtube.com/@Edman_haking-i4f" target="_blank" class="social-link youtube">▶️ يوتيوب</a>
+    <a href="https://t.me/youssef7_HAKER" target="_blank" class="social-link telegram">✈️ تليجرام</a>
+    <a href="https://ywsfalmrb29-jpg.github.io/LEARN_HACK_EDMAN/" target="_blank" class="social-link">🌐 تعلم الأمن السيبراني</a>
+  </div>
+  <div class="copyright">
+    <span class="brand">👑 Edman Haking 👑</span>
+    جميع الحقوق محفوظة © 2025
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
